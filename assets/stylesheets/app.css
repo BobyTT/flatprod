@@ -48,7 +48,7 @@ body {
 /* line 325, ../bower_components/foundation/scss/foundation/components/_global.scss */
 body {
   background: #ffa502;
-  color: #393939;
+  color: #444444;
   padding: 0;
   margin: 0;
   font-family: "Raleway", sans-serif;
@@ -5966,7 +5966,7 @@ p aside {
 /* Default header styles */
 /* line 182, ../bower_components/foundation/scss/foundation/components/_type.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Open Sans", "Raleway", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 300;
   font-style: normal;
   color: #222222;
@@ -6139,7 +6139,7 @@ abbr,
 acronym {
   text-transform: uppercase;
   font-size: 90%;
-  color: #393939;
+  color: #444444;
   border-bottom: 1px dotted #dddddd;
   cursor: help;
 }
@@ -6438,7 +6438,7 @@ meta.foundation-mq-topbar {
 /* line 162, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar .name h1 {
   line-height: 45px;
-  font-size: 1.0625rem;
+  font-size: 0.625rem;
   margin: 0;
 }
 /* line 166, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
@@ -6546,14 +6546,14 @@ meta.foundation-mq-topbar {
   padding: 12px 0 12px 0;
   padding-left: 15px;
   font-family: "Raleway", sans-serif;
-  font-size: 0.8125rem;
+  font-size: 0.625rem;
   font-weight: normal;
   background: #333333;
 }
 /* line 293, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > a.button {
   background: #008cba;
-  font-size: 0.8125rem;
+  font-size: 0.625rem;
   padding-right: 15px;
   padding-left: 15px;
 }
@@ -7705,14 +7705,147 @@ th.hide-for-touch {
   display: table-cell !important;
 }
 
-/* line 6, ../scss/app.scss */
+/* line 50, icon/*.png */
+.icon-sprite, .icon-facebook, .icon-twitter {
+  background: url('/assets/img/icon-s0fe6288e4b.png') no-repeat;
+}
+
+/* line 60, ../../../../../CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-facebook {
+  background-position: 0 -36px;
+}
+
+/* line 60, ../../../../../CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.icon-twitter {
+  background-position: 0 0;
+}
+
+/* line 10, ../scss/app.scss */
+header {
+  padding: 50px 20px;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 10, ../scss/app.scss */
+  header {
+    padding: 150px 20px 600px 20px;
+  }
+}
+
+/* line 17, ../scss/app.scss */
+#container section {
+  padding: 50px 20px;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 17, ../scss/app.scss */
+  #container section {
+    padding: 100px 20px 200px 20px;
+  }
+}
+
+/* line 25, ../scss/app.scss */
+[class^="icon-"],
+[class*=" icon-"] {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  *margin-right: .3em;
+  /* ie7-restore-right-whitespace */
+  vertical-align: text-top;
+  background-repeat: no-repeat;
+}
+
+/* line 34, ../scss/app.scss */
 h1 {
   font-weight: bold;
   font-weight: 900;
 }
 
-/* line 7, ../scss/app.scss */
+/* line 35, ../scss/app.scss */
 h2 {
   font-weight: 800;
   text-transform: uppercase;
+  text-align: center;
+  color: white;
+  line-height: 1.2;
+}
+/* line 41, ../scss/app.scss */
+h2 span {
+  font-weight: 600;
+  display: block;
+  font-size: .6em;
+  text-transform: lowercase;
+}
+
+/* line 49, ../scss/app.scss */
+p {
+  line-height: 1;
+}
+
+/* line 52, ../scss/app.scss */
+section.web {
+  position: relative;
+  height: 500px;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 55, ../scss/app.scss */
+  section.web .mac-book {
+    max-width: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+/* line 63, ../scss/app.scss */
+section.web h2 {
+  background: transparent url(../img/brain.png) no-repeat top center;
+  padding-top: 150px;
+}
+
+/* line 68, ../scss/app.scss */
+section.projects {
+  background: #f3f3f3;
+}
+
+/* line 71, ../scss/app.scss */
+section.video {
+  background: #dc5341 url(../img/bg-video.png) no-repeat center center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+/* line 77, ../scss/app.scss */
+section.video h2 {
+  background: transparent url(../img/perspective.png) no-repeat top center;
+  padding-top: 200px;
+  margin-bottom: 100px;
+  font-weight: 900;
+  font-size: 5.625rem;
+  line-height: .8;
+}
+/* line 84, ../scss/app.scss */
+section.video h2 strong {
+  font-weight: 900;
+  font-size: 1.33em;
+}
+
+/* line 90, ../scss/app.scss */
+section.redaction {
+  background: white;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: normal;
+}
+/* line 94, ../scss/app.scss */
+section.redaction h2 {
+  background: transparent url(../img/write.png) no-repeat top center;
+  padding-top: 150px;
+  color: #444;
+}
+/* line 98, ../scss/app.scss */
+section.redaction h2 span {
+  font-family: "Times New Roman", Times, serif;
+}
+/* line 100, ../scss/app.scss */
+section.redaction div:nth-child(2) {
+  clear: both;
 }

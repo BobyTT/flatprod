@@ -1,11 +1,104 @@
 @import "settings";
 @import "foundation";
 
+@import "icon/*.png";
+@include all-icon-sprites;
+
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,900,800,600);
+
+//Basics
+header{
+	padding:50px 20px;
+	@media #{$medium-up} {
+		padding: 150px 20px 600px 20px;
+	}
+
+}
+#container section{
+	padding:50px 20px;
+	@media #{$medium-up} {
+		padding:100px 20px 200px 20px;
+	}
+}
+//dynamic icons
+[class^="icon-"],
+[class*=" icon-"] {
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	*margin-right: .3em; /* ie7-restore-right-whitespace */
+	vertical-align: text-top;
+	background-repeat: no-repeat;
+}
 // Typographic
 h1{font-weight:bold;font-weight:900;}
-h2{font-weight:800;text-transform: uppercase;}
+h2{
+	font-weight:800;
+	text-transform: uppercase;
+	text-align: center;
+	color: white;
+	line-height: 1.2;
+	span{
+		font-weight:600;
+		display: block;
+		font-size:.6em;
+		text-transform: lowercase;
+	}
+	
+}
+p{line-height: 1;}
 
+//Specific sections
+section.web{
+	position: relative;
+	height:500px;
+	.mac-book{
+		@media #{$medium-up} {
+			max-width: 50%;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+	h2{
+		background: transparent url(../img/brain.png) no-repeat top center;
+		padding-top: 150px;
+	}
+}
+section.projects{
+	background: #f3f3f3;
+}
+section.video{
+	background:#dc5341 url(../img/bg-video.png) no-repeat center center;
+	background-size: cover;
+	color: white;
+	text-align: center;
+	overflow: hidden;
+	h2{
+		background: transparent url(../img/perspective.png) no-repeat top center;
+		padding-top: 200px;
+		margin-bottom: 100px;
+		font-weight: 900;
+		font-size:rem-calc(90);
+		line-height: .8;
+		strong{
+			font-weight: 900;
+			font-size: 1.33em;
+		}
+	}
+}
+section.redaction{
+	background:white;
+	font-family: "Times New Roman", Times, serif;
+	font-weight: normal;
+	h2{
+		background: transparent url(../img/write.png) no-repeat top center;
+		padding-top: 150px;
+		color: #444;
+		span{font-family: "Times New Roman", Times, serif;}
+	}
+	div:nth-child(2){ clear: both;}
+}
 
 // Or selectively include components
 // @import
