@@ -1,4 +1,5 @@
 @import url("//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
+@import url(../fonts/foundation-icons/foundation-icons.css);
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,900,800,600);
 /* line 287, ../bower_components/foundation/scss/foundation/components/_global.scss */
 meta.foundation-mq-small {
@@ -7720,29 +7721,29 @@ th.hide-for-touch {
   background-position: 0 0;
 }
 
-/* line 10, ../scss/app.scss */
+/* line 21, ../scss/app.scss */
 header {
   padding: 50px 20px;
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 10, ../scss/app.scss */
+  /* line 21, ../scss/app.scss */
   header {
     padding: 150px 20px 600px 20px;
   }
 }
 
-/* line 17, ../scss/app.scss */
+/* line 28, ../scss/app.scss */
 #container section {
   padding: 50px 20px;
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 17, ../scss/app.scss */
+  /* line 28, ../scss/app.scss */
   #container section {
     padding: 100px 20px 200px 20px;
   }
 }
 
-/* line 25, ../scss/app.scss */
+/* line 36, ../scss/app.scss */
 [class^="icon-"],
 [class*=" icon-"] {
   display: inline-block;
@@ -7754,13 +7755,13 @@ header {
   background-repeat: no-repeat;
 }
 
-/* line 34, ../scss/app.scss */
+/* line 45, ../scss/app.scss */
 h1 {
   font-weight: bold;
   font-weight: 900;
 }
 
-/* line 35, ../scss/app.scss */
+/* line 46, ../scss/app.scss */
 h2 {
   font-weight: 800;
   text-transform: uppercase;
@@ -7768,7 +7769,7 @@ h2 {
   color: white;
   line-height: 1.2;
 }
-/* line 41, ../scss/app.scss */
+/* line 52, ../scss/app.scss */
 h2 span {
   font-weight: 600;
   display: block;
@@ -7776,18 +7777,209 @@ h2 span {
   text-transform: lowercase;
 }
 
-/* line 49, ../scss/app.scss */
+/* line 60, ../scss/app.scss */
 p {
   line-height: 1;
 }
 
-/* line 52, ../scss/app.scss */
-section.web {
-  position: relative;
-  height: 500px;
+/* line 61, ../scss/app.scss */
+.centered-text {
+  text-align: center;
+}
+
+/* line 62, ../scss/app.scss */
+.orbit-list li img {
+  width: 100%;
+}
+
+/* line 63, ../scss/app.scss */
+img.rounded {
+  -webkit-border-radius: 100% 100%;
+  -moz-border-radius: 100% / 100%;
+  border-radius: 100% / 100%;
+}
+
+@media only screen and (max-width: 40em) {
+  /* line 65, ../scss/app.scss */
+  .list-thumbs ul li {
+    margin: .5em auto;
+    display: block;
+    float: none;
+    width: 70%;
+    text-align: center;
+  }
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 55, ../scss/app.scss */
+  /* line 65, ../scss/app.scss */
+  .list-thumbs ul li {
+    float: right;
+    margin: .5em .1em;
+  }
+}
+/* line 79, ../scss/app.scss */
+.list-thumbs ul li img {
+  width: 80%;
+}
+
+/* line 83, ../scss/app.scss */
+header .row .columns ul {
+  width: 400px;
+  list-style: none;
+}
+/* line 86, ../scss/app.scss */
+header .row .columns ul li {
+  float: left;
+  margin: -50px;
+  position: relative;
+  min-width: 200px;
+  min-height: 200px;
+}
+/* line 94, ../scss/app.scss */
+header .row .columns ul li img {
+  position: absolute;
+  -webkit-clip-path: polygon(0 50%, 50% 0, 100% 50%, 50% 100%, 0 50%);
+  -moz-clip-path: polygon(0 50%, 50% 0, 100% 50%, 50% 100%, 0 50%);
+  -moz-webkit-clip-path: polygon(0 50%, 50% 0, 100% 50%, 50% 100%, 0 50%);
+  -ms-clip-path: polygon(0 50%, 50% 0, 100% 50%, 50% 100%, 0 50%);
+  clip-path: polygon(0 50%, 50% 0, 100% 50%, 50% 100%, 0 50%);
+  width: 190px;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+/* line 102, ../scss/app.scss */
+header .row .columns ul li:nth-child(2) img {
+  left: 5px;
+  top: -1000px;
+}
+/* line 103, ../scss/app.scss */
+header .row .columns ul li:nth-child(3) img {
+  left: 1000px;
+  top: 5px;
+}
+/* line 104, ../scss/app.scss */
+header .row .columns ul li:nth-child(4) img {
+  left: 1000px;
+  top: 1000px;
+}
+/* line 105, ../scss/app.scss */
+header .row .columns ul li:nth-child(5) img {
+  left: -4000px;
+  top: 5px;
+}
+/* line 106, ../scss/app.scss */
+header .row .columns ul li:nth-child(6) img {
+  left: 5px;
+  top: 4000px;
+}
+/* line 107, ../scss/app.scss */
+header .row .columns ul li:nth-child(7) img {
+  left: 2000px;
+  top: 2000px;
+}
+/* line 108, ../scss/app.scss */
+header .row .columns ul li.base img {
+  position: static;
+  width: 400px;
+  height: 400px;
+}
+
+/* line 123, ../scss/app.scss */
+header.animate .row .columns ul li:nth-child(2) img {
+  left: 5px;
+  top: 5px;
+}
+/* line 124, ../scss/app.scss */
+header.animate .row .columns ul li:nth-child(3) img {
+  left: 100px;
+  top: 5px;
+}
+/* line 125, ../scss/app.scss */
+header.animate .row .columns ul li:nth-child(4) img {
+  left: 5px;
+  top: 5px;
+}
+/* line 126, ../scss/app.scss */
+header.animate .row .columns ul li:nth-child(5) img {
+  left: 5px;
+  top: 5px;
+}
+/* line 127, ../scss/app.scss */
+header.animate .row .columns ul li:nth-child(6) img {
+  left: 5px;
+  top: 100px;
+}
+/* line 128, ../scss/app.scss */
+header.animate .row .columns ul li:nth-child(7) img {
+  left: 5px;
+  top: 5px;
+}
+
+/* line 135, ../scss/app.scss */
+header.hover .row .columns ul li img {
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
+}
+/* line 136, ../scss/app.scss */
+header.hover .row .columns ul li:nth-child(2) img {
+  top: -50px;
+}
+/* line 137, ../scss/app.scss */
+header.hover .row .columns ul li:nth-child(3) img {
+  left: 180px;
+}
+/* line 138, ../scss/app.scss */
+header.hover .row .columns ul li:nth-child(4) img {
+  left: 80px;
+  top: 40px;
+}
+/* line 139, ../scss/app.scss */
+header.hover .row .columns ul li:nth-child(5) img {
+  left: -50px;
+  top: 50px;
+}
+/* line 140, ../scss/app.scss */
+header.hover .row .columns ul li:nth-child(6) img {
+  left: 5px;
+  top: 200px;
+}
+/* line 141, ../scss/app.scss */
+header.hover .row .columns ul li:nth-child(7) img {
+  left: 40px;
+  top: 80px;
+}
+
+/* line 145, ../scss/app.scss */
+header .social {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+/* line 150, ../scss/app.scss */
+section.web {
+  position: relative;
+}
+@media only screen {
+  /* line 150, ../scss/app.scss */
+  section.web {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  /* line 150, ../scss/app.scss */
+  section.web {
+    height: 500px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  /* line 161, ../scss/app.scss */
   section.web .mac-book {
     max-width: 50%;
     position: absolute;
@@ -7795,18 +7987,119 @@ section.web {
     top: 0;
   }
 }
-/* line 63, ../scss/app.scss */
+/* line 170, ../scss/app.scss */
 section.web h2 {
   background: transparent url(../img/brain.png) no-repeat top center;
   padding-top: 150px;
 }
 
-/* line 68, ../scss/app.scss */
+/* line 175, ../scss/app.scss */
 section.projects {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  clear: both;
+  padding-bottom: 0 !important;
+  padding-top: 1em !important;
   background: #f3f3f3;
 }
+@media only screen and (min-width: 64.063em) {
+  /* line 183, ../scss/app.scss */
+  section.projects .orbit-bullets-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+}
+/* line 184, ../scss/app.scss */
+section.projects .orbit-list {
+  position: relative;
+  color: white;
+}
+/* line 187, ../scss/app.scss */
+section.projects .orbit-list .description {
+  padding: 2% 10%;
+}
+@media only screen {
+  /* line 187, ../scss/app.scss */
+  section.projects .orbit-list .description {
+    position: absolute;
+    top: 0;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  /* line 187, ../scss/app.scss */
+  section.projects .orbit-list .description {
+    position: absolute;
+    bottom: 0;
+    top: auto;
+  }
+}
+/* line 198, ../scss/app.scss */
+section.projects .orbit-list .description p {
+  font-size: 70%;
+}
+/* line 199, ../scss/app.scss */
+section.projects .orbit-list .description h3 {
+  font-size: 90%;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+/* line 200, ../scss/app.scss */
+section.projects .orbit-list .description .button {
+  background: #444;
+  float: right;
+}
+/* line 202, ../scss/app.scss */
+section.projects .orbit-list .stats {
+  position: absolute;
+  top: 0;
+  padding: 2% 10%;
+}
+/* line 206, ../scss/app.scss */
+section.projects .orbit-list .stats i {
+  font-style: normal;
+  font-size: 2.5em;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1em;
+  display: inline-block;
+  margin: 0 1em;
+}
+/* line 215, ../scss/app.scss */
+section.projects .orbit-list .stats i:before {
+  display: block;
+  text-align: center;
+}
+/* line 218, ../scss/app.scss */
+section.projects .row:first-child {
+  margin-bottom: 4em;
+}
+@media only screen and (min-width: 64.063em) {
+  /* line 221, ../scss/app.scss */
+  section.projects .row .columns h2 {
+    color: #444;
+    position: relative;
+  }
+  /* line 222, ../scss/app.scss */
+  section.projects .row .columns h2:after {
+    content: "";
+    position: absolute;
+    bottom: -78px;
+    left: 50%;
+    margin-left: -40px;
+    border-top: 80px solid #f3f3f3;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    height: 0;
+    width: 0;
+    z-index: 1000;
+  }
+}
 
-/* line 71, ../scss/app.scss */
+/* line 240, ../scss/app.scss */
 section.video {
   background: #dc5341 url(../img/bg-video.png) no-repeat center center;
   background-size: cover;
@@ -7814,38 +8107,87 @@ section.video {
   text-align: center;
   overflow: hidden;
 }
-/* line 77, ../scss/app.scss */
+/* line 246, ../scss/app.scss */
 section.video h2 {
   background: transparent url(../img/perspective.png) no-repeat top center;
   padding-top: 200px;
   margin-bottom: 100px;
   font-weight: 900;
-  font-size: 5.625rem;
   line-height: .8;
 }
-/* line 84, ../scss/app.scss */
+@media only screen {
+  /* line 246, ../scss/app.scss */
+  section.video h2 {
+    font-size: 3.125rem;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  /* line 246, ../scss/app.scss */
+  section.video h2 {
+    font-size: 5.625rem;
+  }
+}
+/* line 258, ../scss/app.scss */
 section.video h2 strong {
   font-weight: 900;
   font-size: 1.33em;
 }
 
-/* line 90, ../scss/app.scss */
+/* line 264, ../scss/app.scss */
 section.redaction {
   background: white;
   font-family: "Times New Roman", Times, serif;
   font-weight: normal;
 }
-/* line 94, ../scss/app.scss */
+/* line 268, ../scss/app.scss */
 section.redaction h2 {
   background: transparent url(../img/write.png) no-repeat top center;
   padding-top: 150px;
   color: #444;
 }
-/* line 98, ../scss/app.scss */
+/* line 272, ../scss/app.scss */
 section.redaction h2 span {
   font-family: "Times New Roman", Times, serif;
 }
-/* line 100, ../scss/app.scss */
+/* line 274, ../scss/app.scss */
 section.redaction div:nth-child(2) {
   clear: both;
+}
+
+/* line 276, ../scss/app.scss */
+section.contact-equipe {
+  background: #ffd902;
+}
+/* line 278, ../scss/app.scss */
+section.contact-equipe h2 {
+  color: #444;
+}
+/* line 281, ../scss/app.scss */
+section.contact-equipe h3 {
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+/* line 282, ../scss/app.scss */
+section.contact-equipe p {
+  font-size: 0.75rem;
+}
+/* line 283, ../scss/app.scss */
+section.contact-equipe ul {
+  list-style: none;
+}
+/* line 287, ../scss/app.scss */
+section.contact-equipe .equipe {
+  text-align: center;
+}
+/* line 289, ../scss/app.scss */
+section.contact-equipe .equipe ul li {
+  height: 250px;
+  text-align: center;
+  margin-left: 3% !important;
+  margin-right: 3% !important;
+  width: 25%;
+}
+/* line 299, ../scss/app.scss */
+section.contact-equipe .contact ul li {
+  font-size: 0.75rem;
 }
