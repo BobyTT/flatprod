@@ -8,7 +8,7 @@
   <script src="assets/bower_components/modernizr/modernizr.js"></script>
 </head>
 <body>
-    <nav class="top-bar" data-topbar>
+    <nav class="top-bar" data-topbar data-magellan-expedition="fixed">
       <ul class="title-area">
         <li class="name">
           <h1><a href="#">FLATPROD!</a></h1>
@@ -19,10 +19,10 @@
       <section class="top-bar-section">
         <!-- Right Nav Section -->
         <ul class="right">
-          <li class="active"><a href="#">web</a></li>
-          <li><a href="#">vidéo</a></li>
-          <li><a href="#">rédaction</a></li>
-          <li><a href="#">contact</a></li>
+          <li data-magellan-arrival="web"><a href="#web">web</a></li>
+          <li data-magellan-arrival="video"><a href="#video">vidéo</a></li>
+          <li data-magellan-arrival="about"><a href="#about">rédaction & à propos</a></li>
+          <li data-magellan-arrival="contact-team"><a href="#contact-team">équipe & contact</a></li>
         </ul>
       </section>
     </nav>
@@ -50,7 +50,7 @@
       </div>
     </div>
   </header>
-  <section class="web">
+  <section class="web" id="web" data-magellan-destination="web">
     <div class="row">
       <div class="large-6 columns">
       </div>
@@ -103,7 +103,7 @@
     </ul>
   </section>
 
-  <section class="video">
+  <section class="video" id="video" data-magellan-destination="video">
       <div class="medium-5 columns">
         <h2><strong>Broad</strong> Capture</h2>
         <p>Connais-tu quelqu'un chez vous, madame la comtesse de la nouvelle que vous êtes ! Jolie silhouette pour un roman. Dormait-il près des chevaux en meilleure forme.</p>
@@ -129,7 +129,7 @@
       </ul>
       </div>
   </section>
-  <section class="redaction">
+  <section class="redaction" id="about" data-magellan-destination="about">
     <div class="row">
        <div class="medium-6 large-5 columns">
         <h2><span>written by</span> the Redactors</h2>
@@ -145,7 +145,7 @@
 
     </div>
   </section>
-  <section class="contact-equipe">
+  <section class="contact-equipe" id="contact-team" data-magellan-destination="contact-team">
     <div class="row">
       <div class="medium-6 columns equipe">
         <h2>L'équipe</h2>
@@ -200,6 +200,7 @@
 </div>
     <script src="assets/bower_components/jquery/jquery.js"></script>
     <script src="assets/bower_components/foundation/js/foundation.min.js"></script>
+    <script src="assets/bower_components/foundation/js/foundation/foundation.magellan.js"></script>
     <script src="assets/js/app.js"></script>
 </body>
 </html>

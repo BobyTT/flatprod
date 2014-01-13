@@ -1,3 +1,3 @@
 // Foundation JavaScript
 // Documentation can be found at: http://foundation.zurb.com/docs
-$(document).foundation();$(document).ready(function(){$("header").delay(5e3).addClass("animate");$("header .base img").hover(function(){$("header").addClass("hover")});$("header .base img").mouseout(function(){$("header").removeClass("hover")})});
+function smoothScroll(e,t,n){if(n<0)return;var r=t-$(window).scrollTop(),i=r/n*10;this.scrollToTimerCache=setTimeout(function(){if(!isNaN(parseInt(i,10))){window.scrollTo(0,$(window).scrollTop()+i);smoothScroll(e,t,n-10)}}.bind(this),10)}$(document).foundation();$(document).ready(function(){$("header").delay(5e3).addClass("animate");$("header .base img").hover(function(){$("header").addClass("hover")});$("header .base img").mouseout(function(){$("header").removeClass("hover")});$(".top-bar-section a").on("click",function(e){e.preventDefault();smoothScroll($(window),$($(e.currentTarget).attr("href")).offset().top,300)})});
