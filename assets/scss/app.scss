@@ -31,7 +31,10 @@ header{
 		padding:100px 20px 200px 20px;
 	}
 }
-.top-bar{height: auto;}
+[data-magellan-expedition] {
+  padding: 0;
+}
+#navbar{z-index: 10000;}
 //dynamic icons
 [class^="icon-"],
 [class*=" icon-"] {
@@ -143,10 +146,12 @@ header.hover .row .columns{
 		}
 	}
 }
-header .social{
-	position: absolute;
-	top: 1em;
-	right: 1em;
+@media #{$medium-up} {
+	header .social{
+		position: absolute;
+		top: 1em;
+		right: 1em;
+	}
 }
 section.web{
 	position: relative;
