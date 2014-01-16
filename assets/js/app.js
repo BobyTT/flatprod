@@ -1,31 +1,32 @@
+
 // Foundation JavaScript
 // Documentation can be found at: http://foundation.zurb.com/docs
 $(document).foundation();
 $(document).ready(function(){
-	$('header').delay(5000).addClass('animate');
-	$('header .base img').hover(function(){
-		$('header').addClass('hover');
+	$('.top-bar-section a,section.title a').each(function(i,el){
+
+		$(el).attr('goto',$(el).attr('href'));
+		$(el).attr('href','javascript:void(0);');
+
+		$(el).on('click', function(e) {
+			e.preventDefault();
+			$(window).scrollTo($($(e.currentTarget).attr('goto')), 800 );
+		});
+
 	});
-	$('header .base img').mouseout(function(){
-		$('header').removeClass('hover');
-	});
-	$('.top-bar-section a').on('click', function(e) {
-	    e.preventDefault();
-	    smoothScroll($(window), $($(e.currentTarget).attr('href')).offset().top, 300);
+
+	
+	
+	$(window).scroll(function() {
+	        var titlePos = $('section.title').position();
+
+		if( (titlePos.top+$('.title').outerHeight())-($window.scrollTop()+$window.height())<=0 ){
+			$('section.title').css('background-attachment','scroll');
+		}else{
+			$('section.title').css('background-attachment','fixed');
+		}
+			
 	});
 });
 
 
-function smoothScroll(el, to, duration) {
-    if (duration < 0) {
-        return;
-    }
-    var difference = to - $(window).scrollTop();
-    var perTick = difference / duration * 10;
-    this.scrollToTimerCache = setTimeout(function() {
-        if (!isNaN(parseInt(perTick, 10))) {
-            window.scrollTo(0, $(window).scrollTop() + perTick);
-            smoothScroll(el, to, duration - 10);
-        }
-    }.bind(this), 10);
-}

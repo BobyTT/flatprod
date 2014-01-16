@@ -16,16 +16,61 @@
   -ms-clip-path: $data;
   clip-path: $data;
 }
-
+@mixin keyframes ($animation_name) {
+    @-webkit-keyframes $animation_name {
+        @content;
+    }
+ 
+    @-moz-keyframes $animation_name {
+        @content;
+    }
+ 
+    @-o-keyframes $animation_name {
+        @content;
+    }
+ 
+    @keyframes $animation_name {
+        @content;
+    }
+}
+@mixin animation ($data) {
+    -webkit-animation: $data; /* Safari 4+ */
+    -moz-animation: $data; /* Fx 5+ */
+    -o-animation: $data; /* Opera 12+ */
+    animation: $data; /* IE 10+ */
+}
+@include keyframes(rocketAnimation) {
+    0% { margin-bottom:0;}
+    33% { margin-bottom:3px;}
+    50% { margin-bottom:1px; }
+    100% { margin-bottom:5px; }
+}
 //Basics
 header{
-	padding:50px 20px;
-	@media #{$medium-up} {
-		padding: 150px 20px 600px 20px;
+	background: transparent url(../img/header/bg_header.jpg) no-repeat 50% 0 fixed;
+	background-size: cover;
+
+	padding:150px 20px;
+	overflow: hidden;
+	
+	div.row{
+		position: relative;
+		.slogan{
+			
+			position: absolute;
+			bottom: 100px;
+			width: 100%;
+			h2{
+				margin-top: 300px;
+			}
+			img{
+				@include animation(rocketAnimation .3s linear backwards infinite);
+			}
+		}
 	}
 
 }
-#container section{
+#container section:not(.top-bar-section){
 	padding:50px 20px;
 	@media #{$medium-up} {
 		padding:100px 20px 200px 20px;
@@ -34,7 +79,9 @@ header{
 [data-magellan-expedition] {
   padding: 0;
 }
-#navbar{z-index: 10000;}
+#navbar{
+	z-index: 998;
+}
 //dynamic icons
 [class^="icon-"],
 [class*=" icon-"] {
@@ -97,8 +144,9 @@ header .row .columns{
 			
 			img{
 				position: absolute;
-
+				clip-path: url("#clipPolygon");
 				@include clip-path(polygon( 0 50%,50% 0, 100% 50%, 50% 100%, 0 50% ));
+
 				width:190px;
 				
 				@include transition(all 1s);
@@ -117,6 +165,10 @@ header .row .columns{
 			
 		}
 
+	}
+	h2{
+		background: transparent url(../img/brain.png) no-repeat top center;
+		padding-top: 150px;
 	}
 	
 	
@@ -153,16 +205,40 @@ header.hover .row .columns{
 		right: 1em;
 	}
 }
+section.title{
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 600px !important;
+	//background: transparent !important;
+	background: transparent url(../img/triangle.png) no-repeat bottom center fixed;
+	background-size: auto 100%;
+	/*&:before{
+		content: "";
+		position: fixed;
+		bottom:0;
+		left:50%;
+		margin-left: -900px;
+		border-top: 1800px solid white;
+		border-left: 1800px solid transparent;
+		border-right: 1800px solid transparent;
+		height: 0;
+		width: 0;
+		z-index:-1;
+
+	}*/
+	a{margin-top: 1em;font-weight: 600 !important;}
+}
 section.web{
 	position: relative;
+	//background: #ffa502;
+	background: white url(../img/triangle_orange.png) no-repeat top center absolute;
+	background-size: auto 100%;
 	@media #{$small-up} {
 		padding-left: 0 !important;
 		padding-right: 0 !important;
 	}
 	@media #{$large-up} {
-		height:500px;
-		padding-left: 20px !important;
-		padding-right: 20px !important;
+		padding:150px 20px 0 20px !important;
 	}
 	.mac-book{
 
@@ -174,19 +250,20 @@ section.web{
 		}
 	}
 	h2{
-		background: transparent url(../img/brain.png) no-repeat top center;
-		padding-top: 150px;
+		padding-top: 1em;
+		width: 100%;
 	}
+	
 }
 section.projects{
 
 	padding-left: 0 !important;
 	padding-right: 0 !important;
 	clear:both;
-	padding-bottom: 0 !important;
+	//padding-bottom: 0 !important;
 	padding-top: 1em !important;
 	background: #f3f3f3;
-	@media #{$large-up} {.orbit-bullets-container{position: absolute;bottom:0;left: 0;width: 100%;z-index:1000;}}
+	@media #{$large-up} {.orbit-bullets-container{position: absolute;bottom:0;left: 0;width: 100%;z-index:996;}}
 	.orbit-list{
 		position: relative;
 		color: white;
@@ -227,16 +304,16 @@ section.projects{
 			h2{color: #444;position: relative;}
 			h2:after{
 				content: "";
-			position: absolute;
-			bottom:-78px;
-			left:50%;
-			margin-left: -40px;
-			border-top: 80px solid #f3f3f3;
-			border-left: 80px solid transparent;
-			border-right: 80px solid transparent;
-			height: 0;
-			width: 0;
-			z-index:1000;
+				position: absolute;
+				bottom:-78px;
+				left:50%;
+				margin-left: -40px;
+				border-top: 80px solid #f3f3f3;
+				border-left: 80px solid transparent;
+				border-right: 80px solid transparent;
+				height: 0;
+				width: 0;
+				z-index:997;
 
 			}
 			
