@@ -39,7 +39,7 @@
     -o-animation: $data; /* Opera 12+ */
     animation: $data; /* IE 10+ */
 }
-@include keyframes(rocketAnimation) {
+@include keyframes(brainAnimation) {
     0% { margin-bottom:0;}
     33% { margin-bottom:3px;}
     50% { margin-bottom:1px; }
@@ -58,14 +58,48 @@ header{
 		.slogan{
 			
 			position: absolute;
-			bottom: 100px;
 			width: 100%;
-			h2{
-				margin-top: 300px;
+			@media #{$small-up} {
+				top: 30px;
+				h2{
+					margin-top: 80px;
+				}
+				img{
+					width:70px;
+					//@include animation(brainAnimation .3s linear backwards infinite);
+				}
 			}
-			img{
-				@include animation(rocketAnimation .3s linear backwards infinite);
+			@media #{$medium-up} {
+				top: 80px;
+				h2{
+					margin-top: 200px;
+				}
+				img{
+					width:100px;
+					//@include animation(brainAnimation .3s linear backwards infinite);
+				}
 			}
+			@media #{$large-up} {
+				top: 150px;
+				h2{
+					margin-top: 350px;
+				}
+				img{
+					width: auto;
+					//@include animation(brainAnimation .3s linear backwards infinite);
+				}
+			}
+			@media #{$xlarge-up} {
+				top: 150px;
+				h2{
+					margin-top: 400px;
+				}
+				img{
+					width: auto;
+					//@include animation(brainAnimation .3s linear backwards infinite);
+				}
+			}
+
 		}
 	}
 
