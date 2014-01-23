@@ -8,6 +8,8 @@
 @include all-icon-sprites;
 
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,900,800,600);
+@import url(http://fonts.googleapis.com/css?family=Parisienne);
+@import url(http://fonts.googleapis.com/css?family=Hanalei+Fill);
 
 @mixin clip-path($data) {
   -webkit-clip-path: $data;
@@ -45,11 +47,14 @@
     50% { margin-bottom:1px; }
     100% { margin-bottom:5px; }
 }
+
 //Basics
 header{
-	background: transparent url(../img/header/bg_header.jpg) no-repeat 50% 0 fixed;
+	background: transparent url(../img/header/bg_header.jpg) no-repeat center center fixed;
 	background-size: cover;
-
+	@media #{$small-only} {
+		background-size: auto 100%;
+	}
 	padding:150px 20px;
 	overflow: hidden;
 	
@@ -284,8 +289,10 @@ section.web{
 		}
 	}
 	h2{
-		padding-top: 1em;
+		padding-top: 30px;
 		width: 100%;
+		background: transparent url(../img/ornement.png) no-repeat bottom center;
+		padding-bottom: 20px;
 	}
 	
 }
@@ -351,6 +358,16 @@ section.projects{
 
 			}
 			
+		}
+	}
+	p{
+		span.classic{
+			font-family: 'Parisienne', cursive;
+			font-size: 1.5em;
+		}
+		span.non-classic{
+			font-family: 'Hanalei Fill', cursive;
+			font-size: 1.2em;
 		}
 	}
 }
