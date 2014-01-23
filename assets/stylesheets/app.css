@@ -8396,36 +8396,40 @@ section.redaction h2 span {
   font-family: "Times New Roman", Times, serif;
 }
 /* line 448, ../scss/app.scss */
+section.redaction p {
+  text-align: justify;
+}
+/* line 449, ../scss/app.scss */
 section.redaction div:nth-child(2) {
   clear: both;
 }
 
-/* line 450, ../scss/app.scss */
+/* line 451, ../scss/app.scss */
 section.contact-equipe {
   background: #ffd902;
 }
-/* line 452, ../scss/app.scss */
+/* line 453, ../scss/app.scss */
 section.contact-equipe h2 {
   color: #444;
 }
-/* line 455, ../scss/app.scss */
+/* line 456, ../scss/app.scss */
 section.contact-equipe h3 {
   margin-bottom: 0;
   font-size: 1rem;
 }
-/* line 456, ../scss/app.scss */
+/* line 457, ../scss/app.scss */
 section.contact-equipe p {
   font-size: 0.75rem;
 }
-/* line 457, ../scss/app.scss */
+/* line 458, ../scss/app.scss */
 section.contact-equipe ul {
   list-style: none;
 }
-/* line 461, ../scss/app.scss */
+/* line 462, ../scss/app.scss */
 section.contact-equipe .equipe {
   text-align: center;
 }
-/* line 463, ../scss/app.scss */
+/* line 464, ../scss/app.scss */
 section.contact-equipe .equipe ul li {
   height: 250px;
   text-align: center;
@@ -8433,11 +8437,11 @@ section.contact-equipe .equipe ul li {
   margin-right: 3% !important;
   width: 25%;
 }
-/* line 473, ../scss/app.scss */
+/* line 474, ../scss/app.scss */
 section.contact-equipe .contact ul li {
   font-size: 0.75rem;
 }
-/* line 476, ../scss/app.scss */
+/* line 477, ../scss/app.scss */
 section.contact-equipe .contact .button {
   font-size: 0.5rem;
   background: #BBB;
