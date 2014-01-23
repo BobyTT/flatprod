@@ -304,14 +304,37 @@ section.projects{
 	//padding-bottom: 0 !important;
 	padding-top: 1em !important;
 	background: #f3f3f3;
-	@media #{$large-up} {.orbit-bullets-container{position: absolute;bottom:0;left: 0;width: 100%;z-index:996;}}
+	h2{
+		color: #444;
+	}
+	@media #{$large-up} {
+		.orbit-bullets-container{
+			position: absolute;
+			bottom:0;
+			left: 0;
+			width: 100%;
+			z-index:996;
+		}
+	}
 	.orbit-list{
+		@media #{$small-up} {
+		}
+		@media #{$medium-up} {
+		}
+		@media #{$large-up} {
+		}
+		@media #{$xlarge-up} {
+		}
+		
 		position: relative;
 		color: white;
+		
 		.description{
-			@media #{$small-up} {
-				position: absolute;
-				top: 0;
+			@media #{$small-only} {
+				color:#444;
+			}
+			@media #{$medium-only} {
+				color:#444;
 			}
 			@media #{$large-up} {
 				position: absolute;
@@ -320,7 +343,18 @@ section.projects{
 			}
 			padding: 2% 10%;
 			p{font-size: 70%;}
-			h3{font-size: 90%;color: white;text-transform: uppercase; font-weight: 800;}
+			h3{
+				font-size: 90%;
+				color: white;
+				text-transform: uppercase;
+				font-weight: 800;
+				@media #{$small-up} {
+					color:#444;
+				}
+				@media #{$large-up} {
+					color:white;
+				}
+			}
 			.button{ background: #444; float: right;}
 		}
 		.stats{
@@ -333,7 +367,7 @@ section.projects{
 				font-weight: 800;
 				text-align: center;
 				line-height: 1em;
-				display: inline-block;
+				float: left;
 				margin: 0 1em;
 			}
 			i:before{display: block;text-align: center;}
@@ -342,7 +376,7 @@ section.projects{
 	.row:first-child{margin-bottom: 4em;}
 	@media #{$large-up} {
 		.row .columns{
-			h2{color: #444;position: relative;}
+			h2{position: relative;}
 			h2:after{
 				content: "";
 				position: absolute;
@@ -383,9 +417,15 @@ section.video{
 		margin-bottom: 100px;
 		font-weight: 900;
 		@media #{$small-up} {
+			font-size:rem-calc(40);
+		}
+		@media #{$medium-up} {
 			font-size:rem-calc(50);
 		}
 		@media #{$large-up} {
+			font-size:rem-calc(70);
+		}
+		@media #{$xlarge-up} {
 			font-size:rem-calc(90);
 		}
 		line-height: .8;
@@ -432,6 +472,11 @@ section.contact-equipe{
 
 		ul li{
 			font-size:rem-calc(12);
+		}
+		.button{
+			
+			font-size:rem-calc(8);
+			background: #BBB;
 		}
 	}
 }
