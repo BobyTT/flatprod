@@ -16,12 +16,12 @@ $(document).ready(function(){
 	});
 	$(document).on('opened', '[data-reveal]', function () {
 	  var modal = $(this);
-	  $(modal).find('video').get(0).play();
+	  if( $(modal).find('video').get(0) ) $(modal).find('video').get(0).play();
 	});
 
 	$(document).on('closed', '[data-reveal]', function () {
 	  var modal = $(this);
-	  $(modal).find('video').get(0).pause();
+	  if( $(modal).find('video').get(0) ) $(modal).find('video').get(0).pause();
 	});
 	
 	
